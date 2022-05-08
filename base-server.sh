@@ -22,7 +22,7 @@ curl \
 git-all \
 htop \
 ssh \
-ifconfig \
+net-tools \
 neofetch \
 tar \
 unzip \
