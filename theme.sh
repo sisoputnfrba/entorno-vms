@@ -1,6 +1,8 @@
 #!/bin/bash -x
 
-sudo apt update -y arc-theme
+sudo apt update -y 
+
+sudo apt install -y arc-theme
 
 git clone https://github.com/vinceliuice/Tela-icon-theme
 cd Tela-icon-theme
