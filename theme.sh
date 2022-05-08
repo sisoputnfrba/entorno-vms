@@ -18,7 +18,7 @@ xfconf-query -c xsettings -p /Net/IconThemeName -s "Tela-dark"
 # Fuentes
 xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
 xfconf-query -c xfwm4 -p /general/title_font -s "Ubuntu Bold 10"
-xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "Ubuntu Mono 10"
+xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "Ubuntu Mono 11"
 
 download() {
   file=${1:?}
