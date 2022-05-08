@@ -1,4 +1,6 @@
-# SisOp VMs
+# SisOp VMs - Work In Progress --> 2c2022
+
+> Este repositorio contiene scripts y recursos que estan siendo testeados y NO SE RECOMIENDA SU UTILIZACION. No se brindará soporte para estos scripts hasta que no se encuentren liberadas las VMs 6.0
 
 Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu (se recomienda partir de una instalanción limpia de Ubuntu Server)
 
