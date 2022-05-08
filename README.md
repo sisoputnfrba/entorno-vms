@@ -12,20 +12,21 @@ Este tema esta basado en la creación de [Agustin Ranieri](https://github.com/Ra
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/base-server.sh | bash -x
-reboot
 ```
 
 2. Instalar el entorno gráfico
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/interfaz-grafica.sh | bash -x
-xfce4-session-logout --logout
 ```
 
 3. Instalar el tema
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/theme.sh | bash -x
-xfce4-session-logout --logout
 ```
 
+4. Reiniciar el sistema (Asumiendo que estamos en una terminal)
+```bash
+sudo reboot
+```
