@@ -2,9 +2,9 @@
 
 > Este repositorio contiene scripts y recursos que estan siendo testeados y NO SE RECOMIENDA SU UTILIZACION. No se brindará soporte para estos scripts hasta que no se encuentren liberadas las VMs 6.0
 
-Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu (se recomienda partir de una instalanción limpia de Ubuntu Server)
+Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu. Se recomienda partir de una instalanción limpia de [Ubuntu Server 22.04 LTS](https://ubuntu.com/download/server).
 
-Este tema esta basado en la creación de [Agustin Ranieri](https://github.com/RaniAgus/xfce-theme) agregando los paquetes necesarios para poder servir como entorno de desarrollo del trabajo práctico.
+También incluye un tema para Xfce agregando los paquetes necesarios para poder servir como entorno de desarrollo del trabajo práctico.
 
 ![result](.img/result.png)
 
@@ -26,7 +26,12 @@ wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/interf
 wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/theme.sh | bash -x
 ```
 
-4. Reiniciar el sistema (Asumiendo que estamos en una terminal)
+4. Reiniciar el sistema (asumiendo que estamos en una terminal)
 ```bash
 sudo reboot
 ```
+
+## Contributors
+
+- Damián Facchini [@iago64](https://github.com/iago64)
+- Agustín Ranieri [@RaniAgus](https://github.com/RaniAgus)
