@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+set -e
+
 sudo apt update -y
 
 sudo apt install -y \

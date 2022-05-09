@@ -1,5 +1,7 @@
 #!/bin/bash -x
 
+set -e
+
 sudo apt update -y
 
 sudo apt install -y \
@@ -11,9 +13,10 @@ xfce4-whiskermenu-plugin \
 xarchiver \
 terminator \
 mousepad \
-lightdm lightdm-gtk-greeter \
+lightdm \
+lightdm-gtk-greeter \
 gnome-keyring \
-firefox 
+firefox
 
 # Se instala Eclipse desde el mirror de Brasil
 wget https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2022-03/R/eclipse-cpp-2022-03-R-linux-gtk-x86_64.tar.gz
