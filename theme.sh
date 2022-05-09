@@ -14,12 +14,12 @@ rm -rf Tela-icon-theme
 
 # Tema
 xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Darker"
-xfconf-query -c xfwm4 -p /general/theme -s "Arc-Darker"
+xfconf-query -c xfwm4 -p /general/theme -n -t string -s "Arc-Darker"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Tela-dark"
 
 # Fuentes
 xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
-xfconf-query -c xfwm4 -p /general/title_font -s "Ubuntu Bold 10"
+xfconf-query -c xfwm4 -p /general/title_font -n -t string -s "Ubuntu Bold 10"
 xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "Ubuntu Mono 11"
 
 download() {
