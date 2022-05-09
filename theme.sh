@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-sudo apt update -y 
+sudo apt update -y
 
 sudo apt install -y arc-theme
 
@@ -11,8 +11,8 @@ cd ..
 rm -rf Tela-icon-theme
 
 # Tema
-xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Dark"
-xfconf-query -c xfwm4 -p /general/theme -s "Arc-Dark"
+xfconf-query -c xsettings -p /Net/ThemeName -s "Arc-Darker"
+xfconf-query -c xfwm4 -p /general/theme -s "Arc-Darker"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Tela-dark"
 
 # Fuentes
