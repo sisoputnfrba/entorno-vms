@@ -33,5 +33,5 @@ sudo reboot
 
 ## Contributors
 
-- Damián Facchini [@iago64](https://github.com/iago64)
+- Damian Facchini [@iago64](https://github.com/iago64)
 - Agustín Ranieri [@RaniAgus](https://github.com/RaniAgus)
