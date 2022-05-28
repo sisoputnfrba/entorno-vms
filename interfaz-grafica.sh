@@ -35,7 +35,5 @@ sudo apt install code
 
 code --install-extension ms-vscode.cpptools
 code --install-extension ms-vscode.hexeditor
-code --install-extension ms-vscode-remote.remote-ssh
-code --install-extension MS-vsliveshare.vsliveshare
 code --install-extension eamodio.gitlens
 code --install-extension nhoizey.gremlins
