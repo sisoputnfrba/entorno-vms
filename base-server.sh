@@ -4,9 +4,9 @@ set -e
 
 sudo add-apt-repository -y ppa:git-core/ppa
 
-sudo apt update -y
+sudo apt-get update -y
 
-sudo apt install -y \
+sudo apt-get install -y \
 libbison-dev \
 libcunit1-dev \
 libevent-dev \
