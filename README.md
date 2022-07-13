@@ -28,7 +28,15 @@ wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/theme.
 
 4. Reiniciar el sistema (asumiendo que estamos en una terminal)
 ```bash
-sudo reboot
+reboot
+```
+
+5. [Instalar las guest additions](https://faq.utnso.com.ar/guest-additions) y reiniciar de nuevo
+
+6. Agregar nuestro usuario al grupo `vboxsf`
+
+```bash
+sudo adduser $USER vboxsf
 ```
 
 ## Contributors
