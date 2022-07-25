@@ -33,7 +33,7 @@ sudo apt-get install apt-transport-https
 sudo apt-get update
 sudo apt-get install code
 
-code --install-extension ms-vscode.cpptools
+code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension ms-vscode.hexeditor
 code --install-extension eamodio.gitlens
 code --install-extension nhoizey.gremlins
