@@ -39,6 +39,17 @@ reboot
 sudo adduser $USER vboxsf
 ```
 
+## Instalar IDEs
+
+- Visual Studio Code y Eclipse ya vienen instalados.
+
+- CLion (ver [requerimientos]):
+```
+wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/clion.sh | bash -x
+```
+
+[requerimientos]: https://www.jetbrains.com/help/clion/installation-guide.html
+
 ## Contributors
 
 - Damian Facchini [@iago64](https://github.com/iago64)
