@@ -46,4 +46,4 @@ emacs
 sudo ssh-keygen -A
 sudo /etc/init.d/ssh start
 
-echo -e "\nifconfig\n" >> .bashrc
+echo -e "\nifconfig\n" >> ~/.bashrc
