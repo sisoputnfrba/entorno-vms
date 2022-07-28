@@ -2,6 +2,11 @@
 
 set -e
 
+download() {
+  file=${1:?}
+  wget -O ~/$file "https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/$file"
+}
+
 sudo apt-get update -y
 
 sudo apt-get install -y \
@@ -23,6 +28,10 @@ wget https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/2022-03/R/ecl
 sudo tar xzf eclipse-cpp-*.tar.gz -C /opt
 rm eclipse-cpp-*.tar.gz
 
+# Se agrega la entrada al escritorio
+mkdir -pv ~/.local/share/applications
+download ".local/share/applications/eclipse.desktop"
+
 # Se instala VSCode siguiendo los requisitos de Microsoft
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -33,6 +42,7 @@ sudo apt-get install apt-transport-https
 sudo apt-get update
 sudo apt-get install code
 
+# Se instalan las extensiones recomendadas
 code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension ms-vscode.hexeditor
 code --install-extension matepek.vscode-catch2-test-adapter

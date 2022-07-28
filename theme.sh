@@ -2,10 +2,17 @@
 
 set -e
 
+download() {
+  file=${1:?}
+  wget -O ~/$file "https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/$file"
+}
+
 sudo apt-get update -y
 
+# Instalar tema
 sudo apt-get install -y arc-theme
 
+# Instalar pack de iconos
 git clone https://github.com/vinceliuice/Tela-icon-theme
 cd Tela-icon-theme
 ./install.sh
@@ -21,11 +28,6 @@ xfconf-query -c xsettings -p /Net/IconThemeName -s "Tela-dark"
 xfconf-query -c xsettings -p /Gtk/FontName -s "Ubuntu 10"
 xfconf-query -c xfwm4 -p /general/title_font -n -t string -s "Ubuntu Bold 10"
 xfconf-query -c xsettings -p /Gtk/MonospaceFontName -s "Ubuntu Mono 11"
-
-download() {
-  file=${1:?}
-  wget -O ~/$file "https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/$file"
-}
 
 # Terminator config
 mkdir -pv ~/.config/terminator
@@ -45,6 +47,3 @@ download "panel.tar.bz2"
 xfce4-panel-profiles load ~/panel.tar.bz2
 rm -v ~/panel.tar.bz2
 
-# Desktop entries
-mkdir -pv ~/.local/share/applications
-download ".local/share/applications/eclipse.desktop"
