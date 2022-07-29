@@ -43,12 +43,12 @@ sudo adduser $USER vboxsf
 
 - Visual Studio Code y Eclipse ya vienen instalados.
 
-- CLion (ver [requerimientos]):
+- CLion (ver [requisitos mínimos]):
 ```
 wget -qO- https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/clion.sh | bash -x
 ```
 
-[requerimientos]: https://www.jetbrains.com/help/clion/installation-guide.html
+[requisitos mínimos]: https://www.jetbrains.com/help/clion/installation-guide.html
 
 ## Contributors
 
