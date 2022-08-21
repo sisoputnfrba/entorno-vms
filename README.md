@@ -31,6 +31,8 @@ wget -qO- https://faq.utnso.com.ar/theme.sh | bash -x
 reboot
 ```
 
+### VirtualBox
+
 5. [Instalar las guest additions](https://faq.utnso.com.ar/guest-additions) y reiniciar de nuevo
 
 6. Agregar nuestro usuario al grupo `vboxsf`
