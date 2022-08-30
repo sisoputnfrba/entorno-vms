@@ -35,8 +35,12 @@ download ".config/terminator/config"
 
 # GTK config
 mkdir -pv ~/.config/gtk-3.0
-download ".config/gtk-3.0/bookmarks"
 download ".config/gtk-3.0/gtk.css"
+echo "file://$HOME/Documents" > ~/.config/gtk-3.0/bookmarks
+echo "file://$HOME/Downloads" >> ~/.config/gtk-3.0/bookmarks
+echo "file://$HOME/Music" >> ~/.config/gtk-3.0/bookmarks
+echo "file://$HOME/Pictures" >> ~/.config/gtk-3.0/bookmarks
+echo "file://$HOME/Videos" >> ~/.config/gtk-3.0/bookmarks
 
 # Whisker Menu config
 mkdir -pv ~/.config/xfce4/panel
@@ -46,4 +50,3 @@ download ".config/xfce4/panel/whiskermenu-6.rc"
 download "panel.tar.bz2"
 xfce4-panel-profiles load ~/panel.tar.bz2
 rm -v ~/panel.tar.bz2
-
