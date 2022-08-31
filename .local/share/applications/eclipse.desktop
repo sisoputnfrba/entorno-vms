@@ -2,7 +2,7 @@
 Version=1.1
 Type=Application
 Name=Eclipse
-Icon=eclipse
+Icon=/opt/eclipse/icon.xpm
 Exec=/opt/eclipse/eclipse
 Comment=An IDE for C/C++ Developers
 Categories=Development;IDE;
