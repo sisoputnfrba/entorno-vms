@@ -14,6 +14,8 @@ También incluye un tema para Xfce agregando los paquetes necesarios para poder 
 wget -qO- https://faq.utnso.com.ar/base-server.sh | bash -x
 ```
 
+> Para entender mejor qué es lo que hace cada comando, podés revisar [esta explicación](https://explainshell.com/explain?cmd=wget+-qO-+https%3A%2F%2Ffaq.utnso.com.ar%2Fbase-server.sh+%7C+sh+-x).
+
 2. Instalar el entorno gráfico
 
 ```bash
