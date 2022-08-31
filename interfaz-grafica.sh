@@ -26,15 +26,13 @@ gnome-keyring \
 firefox
 
 # Se obtiene el nombre de la última release de Eclipse y la arquitectura
-ECLIPSE_VERSION=$(curl -s https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/release.xml | grep -oPm1 "(?<=<present>)[^<]+")
+ECLIPSE_VERSION=$(curl -fsS https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/release.xml | grep -oPm1 "(?<=<present>)[^<]+")
 ARCHITECTURE=$(case "$(dpkg --print-architecture)" in ("amd64") echo "x86_64" ;; ("arm64") echo "aarch64" ;; esac)
 ECLIPSE_TARBALL=eclipse-cpp-$(echo ${ECLIPSE_VERSION:?} | tr '/' '-')-linux-gtk-${ARCHITECTURE:?}.tar.gz
 
 # Se instala Eclipse desde el mirror de Brasil
 sudo rm -rf /opt/eclipse
-curl -o "$ECLIPSE_TARBALL" "https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/$ECLIPSE_VERSION/$ECLIPSE_TARBALL"
-sudo tar xzf "$ECLIPSE_TARBALL" -C /opt
-rm "$ECLIPSE_TARBALL"
+curl -fsS "https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/$ECLIPSE_VERSION/$ECLIPSE_TARBALL" | sudo tar xvzC /opt
 
 # Se agrega la entrada al escritorio
 mkdir -pv ~/.local/share/applications
