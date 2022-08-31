@@ -20,6 +20,8 @@ terminator \
 mousepad \
 lightdm \
 lightdm-gtk-greeter \
+gpg \
+apt-transport-https \
 gnome-keyring \
 firefox
 
@@ -39,14 +41,12 @@ mkdir -pv ~/.local/share/applications
 download ".local/share/applications/eclipse.desktop"
 
 # Se instala VSCode siguiendo los requisitos de Microsoft
-sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code
+sudo apt-get update -y
+sudo apt-get install -y code
 
 # Se instalan las extensiones recomendadas
 code --install-extension ms-vscode.cpptools-extension-pack
