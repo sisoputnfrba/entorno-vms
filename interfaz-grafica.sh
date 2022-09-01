@@ -2,11 +2,6 @@
 
 set -e
 
-download() {
-  file=${1:?}
-  wget -O ~/$file "https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/$file"
-}
-
 sudo apt-get update -y
 
 sudo apt-get install -y \
@@ -36,7 +31,19 @@ curl -fsS "https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/$ECLIPS
 
 # Se agrega la entrada al escritorio
 mkdir -pv ~/.local/share/applications
-download ".local/share/applications/eclipse.desktop"
+cat > ~/.local/share/applications/eclipse.desktop <<EOF
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Eclipse
+Icon=/opt/eclipse/icon.xpm
+Exec=/opt/eclipse/eclipse
+Comment=An IDE for C/C++ Developers
+Categories=Development;IDE;
+Terminal=false
+Encoding=UTF-8
+StartupNotify=false
+EOF
 
 # Se instala VSCode siguiendo los requisitos de Microsoft
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
