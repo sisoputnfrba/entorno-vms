@@ -8,24 +8,26 @@ También incluye un tema para Xfce agregando los paquetes necesarios para poder 
 
 ![result](.img/result.png)
 
+## Instalación completa
+
+Ante cualquier duda/problema al ejecutar los comandos, recomendamos revisar primero [esta explicación](https://explainshell.com/explain?cmd=wget+-qO-+https%3A%2F%2Ffaq.utnso.com.ar%2Fbase-server.sh+%7C+sh+-x).
+
 1. Instalar los paquetes de la VM server solamente
 
 ```bash
-wget -qO- https://faq.utnso.com.ar/base-server.sh | bash -x
+wget -qO- https://faq.utnso.com.ar/base-server.sh | sh -x
 ```
-
-> Para entender mejor qué es lo que hace cada comando, podés revisar [esta explicación](https://explainshell.com/explain?cmd=wget+-qO-+https%3A%2F%2Ffaq.utnso.com.ar%2Fbase-server.sh+%7C+sh+-x).
 
 2. Instalar el entorno gráfico
 
 ```bash
-wget -qO- https://faq.utnso.com.ar/interfaz-grafica.sh | bash -x
+wget -qO- https://faq.utnso.com.ar/interfaz-grafica.sh | sh -x
 ```
 
 3. Instalar el tema
 
 ```bash
-wget -qO- https://faq.utnso.com.ar/theme.sh | bash -x
+wget -qO- https://faq.utnso.com.ar/theme.sh | sh -x
 ```
 
 4. Reiniciar el sistema (asumiendo que estamos en una terminal)
@@ -33,26 +35,16 @@ wget -qO- https://faq.utnso.com.ar/theme.sh | bash -x
 reboot
 ```
 
-### VirtualBox
+## Extras
 
-5. [Instalar las guest additions](https://faq.utnso.com.ar/guest-additions) y reiniciar de nuevo
+- Instalar drivers de virtualización para mejorar la interacción entre VM y Host
+  - Para VirtualBox: [instalar las Guest Additions](https://docs.utnso.com.ar/primeros-pasos/entorno-linux.html#instalar-las-guest-additions)
+  - Para UTM: [instalar las Spice Guest Agent Tools](https://youtu.be/hnwK-nkXolc?t=527)
 
-6. Agregar nuestro usuario al grupo `vboxsf`
-
+- Instalar CLion IDE (solo si contamos con los [requisitos recomendados](https://www.jetbrains.com/help/clion/installation-guide.html))
 ```bash
-sudo adduser $USER vboxsf
+wget -qO- https://faq.utnso.com.ar/clion.sh | sh -x
 ```
-
-## Instalar IDEs
-
-- Visual Studio Code y Eclipse ya vienen instalados.
-
-- CLion (ver [requisitos mínimos]):
-```
-wget -qO- https://faq.utnso.com.ar/clion.sh | bash -x
-```
-
-[requisitos mínimos]: https://www.jetbrains.com/help/clion/installation-guide.html
 
 ## Contributors
 
