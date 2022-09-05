@@ -18,19 +18,19 @@ Ante cualquier duda/problema al ejecutar los comandos, recomendamos revisar prim
 wget -qO- https://faq.utnso.com.ar/base-server.sh | sh -x
 ```
 
-2. Instalar el entorno gráfico
+2. Instalar el entorno gráfico XFCE, Eclipse y Visual Studio Code
 
 ```bash
 wget -qO- https://faq.utnso.com.ar/interfaz-grafica.sh | sh -x
 ```
 
-3. Instalar el tema
+3. Instalar el tema (opcional)
 
 ```bash
 wget -qO- https://faq.utnso.com.ar/theme.sh | sh -x
 ```
 
-4. Reiniciar el sistema (asumiendo que estamos en una terminal)
+4. Reiniciar el sistema
 ```bash
 reboot
 ```
