@@ -2,7 +2,7 @@
 
 set -e
 
-CLION_VERSION=2022.2
+CLION_VERSION=2022.2.3
 
 # Se descarga CLion desde el link de descarga oficial
 wget -qO- "https://download.jetbrains.com/cpp/CLion-$CLION_VERSION.tar.gz" \
