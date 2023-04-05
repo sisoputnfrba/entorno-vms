@@ -2,9 +2,9 @@
 
 set -e
 
-sudo apt-get update -y
-
 sudo sed -i "s/\#\$nrconf{restart} = 'i';/\$nrconf {restart} = 'l';/" /etc/needrestart/needrestart.conf
+
+sudo apt-get update -y
 
 sudo apt-get install -y \
 aptitude \
