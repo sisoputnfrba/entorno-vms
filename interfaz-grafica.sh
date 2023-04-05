@@ -4,10 +4,13 @@ set -e
 
 sudo apt-get update -y
 
+sudo sed -i "s/\#\$nrconf{restart} = 'i';/\$nrconf {restart} = 'l';/" /etc/needrestart/needrestart.conf
+
 sudo apt-get install -y \
 aptitude \
 xorg \
 xfce4 \
+xfce4-screenshooter \
 xfce4-panel-profiles \
 xfce4-whiskermenu-plugin \
 xarchiver \
