@@ -17,7 +17,7 @@ Para más información sobre cómo funciona cada comando a ejecutar, podés cons
 1. Instalar los paquetes de la VM server solamente
 
 ```bash
-curl -fsSL https://faq.utnso.com.ar/base-server.sh | sh -x
+curl -fsSL https://faq.utnso.com.ar/base-server.sh | sudo sh -x
 ```
 
 2. Instalar el entorno gráfico XFCE, Eclipse y Visual Studio Code
