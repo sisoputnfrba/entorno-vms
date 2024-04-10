@@ -64,7 +64,7 @@ EOF
 mkdir -pv ~/.config/xfce4/panel
 
 cat > ~/.config/xfce4/panel/whiskermenu-6.rc <<EOF
-favorites=eclipse.desktop,code.desktop,exo-web-browser.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
+favorites=code_code.desktop,eclipse.desktop,exo-web-browser.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
 recent=
 button-icon=distributor-logo-xubuntu
 button-single-row=false
