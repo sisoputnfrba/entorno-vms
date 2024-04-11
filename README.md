@@ -11,7 +11,15 @@ También incluye un tema para Xfce agregando los paquetes necesarios para poder 
 
 ## Instalación
 
-La instalación consiste en ejecutar una serie de scripts que se encuentran en este mismo repositorio:
+La instalación consiste en ejecutar una serie de scripts que se encuentran en este mismo repositorio.
+
+Para ello, necesitamos tener `git` instalado:
+
+```bash
+sudo apt install -y git
+```
+
+Luego, nos clonamos el repo y seguimos los pasos enumerados a continuación:
 
 ```bash
 git clone https://github.com/sisoputnfrba/entorno-vms
