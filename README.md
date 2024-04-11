@@ -11,29 +11,38 @@ También incluye un tema para Xfce agregando los paquetes necesarios para poder 
 
 ## Instalación
 
-La instalación consiste en ejecutar una serie de scripts. Es importante ejecutar cada comando al pie de la letra para que la ejecución se realice correctamente.
+La instalación consiste en ejecutar una serie de scripts que se encuentran en este mismo repositorio:
 
-Para más información sobre cómo funciona cada comando a ejecutar, podés consultar [esta explicación](https://explainshell.com/explain?cmd=curl+-fsSL+example.org+%7C+sh+-x).
+```bash
+git clone https://github.com/sisoputnfrba/entorno-vms
+cd entorno-vms
+```
 
 1. Instalar los paquetes de la VM server solamente
 
 ```bash
-curl -fsSL https://faq.utnso.com.ar/base-server.sh | sudo sh -x
+sudo bash -x base-server.sh
 ```
 
-2. Instalar el entorno gráfico XFCE, Eclipse y Visual Studio Code
+2. Instalar el comando `ifconfig` al iniciar una terminal (opcional)
 
 ```bash
-curl -fsSL https://faq.utnso.com.ar/interfaz-grafica.sh | sh -x
+printf "\nifconfig\n" >> ~/.bashrc
 ```
 
-3. Instalar el tema (opcional)
+3. Instalar el entorno gráfico XFCE, Eclipse y Visual Studio Code
 
 ```bash
-curl -fsSL https://faq.utnso.com.ar/theme.sh | sh -x
+./interfaz-grafica.sh
 ```
 
-4. Reiniciar el sistema
+4. Instalar el tema (opcional)
+
+```bash
+./theme.sh
+```
+
+5. Reiniciar el sistema
 ```bash
 reboot
 ```
@@ -46,7 +55,7 @@ reboot
 
 - Instalar CLion IDE (solo si contamos con los [requisitos recomendados](https://www.jetbrains.com/help/clion/installation-guide.html))
 ```bash
-curl -fsSL https://faq.utnso.com.ar/clion.sh | sh -x
+./clion.sh
 ```
 
 ## Contributors
