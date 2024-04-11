@@ -148,6 +148,118 @@ regex=true
 EOF
 
 # Panel profile
-wget "https://raw.githubusercontent.com/sisoputnfrba/entorno-vms/main/panel.tar.bz2"
-xfce4-panel-profiles load panel.tar.bz2
-rm -v panel.tar.bz2
+mkdir -pv panel/launcher-11 panel/launcher-12 panel/launcher-13
+
+cat > panel/config.txt << EOF
+/configver 2
+/panels [<1>]
+/panels/panel-1/autohide-behavior uint32 0
+/panels/panel-1/background-alpha uint32 100
+/panels/panel-1/background-style uint32 0
+/panels/panel-1/disable-struts false
+/panels/panel-1/enter-opacity uint32 100
+/panels/panel-1/leave-opacity uint32 100
+/panels/panel-1/length uint32 100
+/panels/panel-1/length-adjust true
+/panels/panel-1/mode uint32 0
+/panels/panel-1/nrows uint32 1
+/panels/panel-1/plugin-ids [<6>, <9>, <12>, <13>, <11>, <2>, <3>, <4>, <14>, <5>, <1>, <7>]
+/panels/panel-1/position 'p=8;x=512;y=752'
+/panels/panel-1/position-locked true
+/panels/panel-1/size uint32 41
+/plugins/plugin-1 'notification-plugin'
+/plugins/plugin-11 'launcher'
+/plugins/plugin-11/items [<'terminator.desktop'>]
+/plugins/plugin-12 'launcher'
+/plugins/plugin-12/items [<'filemanager.desktop'>]
+/plugins/plugin-13 'launcher'
+/plugins/plugin-13/items [<'firefox.desktop'>]
+/plugins/plugin-14 'pulseaudio'
+/plugins/plugin-14/enable-keyboard-shortcuts true
+/plugins/plugin-2 'tasklist'
+/plugins/plugin-2/flat-buttons false
+/plugins/plugin-2/grouping uint32 1
+/plugins/plugin-2/include-all-monitors true
+/plugins/plugin-2/include-all-workspaces false
+/plugins/plugin-2/middle-click uint32 0
+/plugins/plugin-2/show-handle true
+/plugins/plugin-2/show-labels false
+/plugins/plugin-2/show-only-minimized false
+/plugins/plugin-2/show-wireframes false
+/plugins/plugin-2/sort-order uint32 0
+/plugins/plugin-3 'separator'
+/plugins/plugin-3/expand true
+/plugins/plugin-3/style uint32 0
+/plugins/plugin-4 'systray'
+/plugins/plugin-4/names-ordered [<'networkmanager applet'>, <'network'>]
+/plugins/plugin-4/names-visible [<'networkmanager applet'>]
+/plugins/plugin-4/show-frame true
+/plugins/plugin-4/size-max uint32 22
+/plugins/plugin-5 'clock'
+/plugins/plugin-5/digital-format '%I:%M %p'
+/plugins/plugin-5/mode uint32 2
+/plugins/plugin-5/show-frame true
+/plugins/plugin-5/tooltip-format '%A %d %B %Y'
+/plugins/plugin-6 'whiskermenu'
+/plugins/plugin-7 'showdesktop'
+/plugins/plugin-9 'separator'
+/plugins/plugin-9/style uint32 2
+EOF
+
+cat > panel/launcher-11/terminator.desktop << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=exo-open --launch TerminalEmulator
+Icon=utilities-terminal
+StartupNotify=true
+Terminal=false
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+X-AppStream-Ignore=True
+Name=Terminal Emulator
+Comment=Use the command line
+X-XFCE-Source=file:///usr/share/applications/exo-terminal-emulator.desktop
+EOF
+
+cat > panel/launcher-12/filemanager.desktop << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=exo-open --launch FileManager %u
+Icon=system-file-manager
+StartupNotify=true
+Terminal=false
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+X-XFCE-MimeType=inode/directory;x-scheme-handler/trash;
+X-AppStream-Ignore=True
+Name=File Manager
+Comment=Browse the file system
+X-XFCE-Source=file:///usr/share/applications/exo-file-manager.desktop
+EOF
+
+cat > panel/launcher-13/firefox.desktop << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=exo-open --launch WebBrowser %u
+Icon=web-browser
+StartupNotify=true
+Terminal=false
+Categories=Network;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+X-XFCE-MimeType=x-scheme-handler/http;x-scheme-handler/https;
+X-AppStream-Ignore=True
+Name=Web Browser
+Comment=Browse the web
+X-XFCE-Source=file:///usr/share/applications/exo-web-browser.desktop
+EOF
+
+(
+  cd panel || exit 1
+  tar -cvjSf panel.tar.bz2 **
+  xfce4-panel-profiles load panel.tar.bz2
+)
+
+rm -rfv panel
