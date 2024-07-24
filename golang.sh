@@ -36,3 +36,4 @@ echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
 source ~/.profile > /dev/null 2>&1
 
 go version
+exec bash -il
