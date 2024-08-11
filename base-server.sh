@@ -43,5 +43,7 @@ nano \
 vim \
 emacs
 
+apt remove -y unattended-upgrades
+
 ssh-keygen -A
 /etc/init.d/ssh start
