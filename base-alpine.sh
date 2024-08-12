@@ -2,6 +2,7 @@
 
 # setup-alpine
 # reboot
+# doas ./base-alpine.sh
 
 sed -i 's/#http/http/g' /etc/apk/repositories
 
