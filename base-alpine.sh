@@ -6,7 +6,7 @@
 sed -i 's/#http/http/g' /etc/apk/repositories
 
 apk update
-apk add \
+apk add coreutils \
   bash \
   curl \
   git \
