@@ -20,6 +20,7 @@ apk add sudo \
   vim \
   emacs \
   build-base \
+  gdb \
   valgrind \
   strace \
   ltrace \
