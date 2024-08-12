@@ -32,7 +32,7 @@ net-tools \
 neofetch \
 tar \
 unzip \
-p7zip-full \
+7zip \
 tig \
 tree \
 wget \
