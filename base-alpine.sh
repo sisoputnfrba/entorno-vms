@@ -33,6 +33,8 @@ apk add sudo \
   autoconf \
   procps-ng
 
+echo "utnso ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
 sed -i 's/AllowTcpForwarding no/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
 
 rc-service sshd restart
