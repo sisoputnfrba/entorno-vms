@@ -6,8 +6,10 @@
 sed -i 's/#http/http/g' /etc/apk/repositories
 
 apk update
-apk add coreutils \
+apk add sudo \
+  coreutils \
   bash \
+  zsh \
   curl \
   git \
   tig \
