@@ -2,7 +2,16 @@
 
 set -e
 
-sudo apk add xfce4-whiskermenu-plugin
+doas apk add xfce4-whiskermenu-plugin
+
+git clone https://github.com/xfce-mirror/xfce4-panel-profiles
+(
+  cd xfce4-panel-profiles || exit 1
+  ./configure 
+  make
+  doas make install
+)
+rm -rvf xfce4-panel-profiles
 
 git clone https://github.com/vinceliuice/Tela-icon-theme
 (
@@ -17,15 +26,6 @@ git clone https://github.com/vinceliuice/Qogir-theme
   ./install.sh 
 )
 rm -rvf Qogir-theme
-
-git clone https://github.com/xfce-mirror/xfce4-panel-profiles
-(
-  cd xfce4-panel-profiles || exit 1
-  ./configure 
-  make
-  doas make install
-)
-rm -rvf xfce4-panel-profiles
 
 # Tema
 xfconf-query -c xsettings -p /Net/ThemeName -s "Qogir-Dark"
