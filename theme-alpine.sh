@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/ash
 
 set -e
 
