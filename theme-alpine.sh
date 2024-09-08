@@ -270,3 +270,5 @@ EOF
 )
 
 rm -rfv panel
+
+doas pkill -u "$USER"
