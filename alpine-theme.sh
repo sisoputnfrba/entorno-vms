@@ -2,6 +2,11 @@
 
 set -e
 
+if [ "$(id -u)" -eq 0 ]; then
+    echo "This script must be run as non-root"
+    exit 255
+fi
+
 doas apk add xfce4-whiskermenu-plugin
 
 git clone --depth=1 https://github.com/xfce-mirror/xfce4-panel-profiles
