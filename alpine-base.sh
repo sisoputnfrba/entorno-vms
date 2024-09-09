@@ -1,4 +1,4 @@
-#!/bin/ash -x
+#!/bin/sh -x
 
 # setup-alpine
 # reboot
