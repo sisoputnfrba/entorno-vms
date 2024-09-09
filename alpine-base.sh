@@ -2,7 +2,11 @@
 
 # setup-alpine
 # reboot
-# doas ./base-alpine.sh
+
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root"
+    exit 255
+fi
 
 sed -i 's/#http/http/g' /etc/apk/repositories
 
