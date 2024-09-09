@@ -1,5 +1,10 @@
 #!/bin/sh -x
 
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root"
+    exit 255
+fi
+
 apk add virtualbox-guest-additions virtualbox-guest-additions-x11 linux-virt
 
 rc-service virtualbox-guest-additions start
