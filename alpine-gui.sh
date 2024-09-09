@@ -1,6 +1,11 @@
-#!/bin/ash
+#!/bin/sh -x
 
-doas setup-xorg-base xfce4 lightdm-gtk-greeter \
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root"
+    exit 255
+fi
+
+setup-xorg-base xfce4 lightdm-gtk-greeter \
   terminator \
   firefox \
   mousepad \
@@ -9,7 +14,7 @@ doas setup-xorg-base xfce4 lightdm-gtk-greeter \
   xfce4-screenshooter \
   xarchiver
 
-doas rc-update add lightdm
-doas rc-update add dbus
+rc-update add lightdm
+rc-update add dbus
 
-doas rc-service lightdm start
+rc-service lightdm start
