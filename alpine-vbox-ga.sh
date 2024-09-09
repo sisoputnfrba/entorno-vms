@@ -7,3 +7,5 @@ rc-update add virtualbox-guest-additions boot
 
 rc-service virtualbox-drm-client start
 rc-update add virtualbox-drm-client default
+
+reboot
