@@ -4,7 +4,7 @@ set -e
 
 doas apk add xfce4-whiskermenu-plugin
 
-git clone https://github.com/xfce-mirror/xfce4-panel-profiles
+git clone --depth=1 https://github.com/xfce-mirror/xfce4-panel-profiles
 (
   cd xfce4-panel-profiles || exit 1
   ./configure 
@@ -13,14 +13,14 @@ git clone https://github.com/xfce-mirror/xfce4-panel-profiles
 )
 rm -rvf xfce4-panel-profiles
 
-git clone https://github.com/vinceliuice/Tela-icon-theme
+git clone --depth=1 https://github.com/vinceliuice/Tela-icon-theme
 (
   cd Tela-icon-theme || exit 1
   ./install.sh 
 )
 rm -rvf Tela-icon-theme
 
-git clone https://github.com/vinceliuice/Qogir-theme
+git clone --depth=1 https://github.com/vinceliuice/Qogir-theme
 (
   cd Qogir-theme || exit 1
   ./install.sh 
