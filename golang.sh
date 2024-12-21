@@ -32,8 +32,8 @@ URL="https://go.dev/dl/${VERSION}.linux-${ARCH}.tar.gz"
 wget $URL -O /tmp/go.tar.gz > /dev/null 2>&1
 sudo tar -C /usr/local -xzf /tmp/go.tar.gz > /dev/null 2>&1
 
-echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-source ~/.profile > /dev/null 2>&1
+echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.bashrc
+source ~/.bashrc > /dev/null 2>&1
 
 go version
 exec bash -il
