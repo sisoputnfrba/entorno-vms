@@ -48,8 +48,14 @@ Encoding=UTF-8
 StartupNotify=false
 EOF
 
-# Se instala VSCode siguiendo los requisitos de Microsoft
-sudo snap install code --classic
+# Se instala VSCode
+if [[ "$(dpkg --print-architecture)" == "arm64" ]]; then
+    curl -L "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm64" -o ./code.deb
+    sudo apt install -y ./code.deb
+    rm -fv ./code.deb
+else
+    sudo snap install code --classic
+fi
 
 # Se instalan las extensiones recomendadas
 code --install-extension ms-vscode.cpptools-extension-pack
