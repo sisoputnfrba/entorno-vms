@@ -195,6 +195,7 @@ cat > panel/config.txt << EOF
 /plugins/plugin-4/names-visible [<'networkmanager applet'>]
 /plugins/plugin-4/show-frame true
 /plugins/plugin-4/size-max uint32 22
+/plugins/plugin-4/square-icons true
 /plugins/plugin-5 'clock'
 /plugins/plugin-5/digital-format '%I:%M %p'
 /plugins/plugin-5/mode uint32 2
