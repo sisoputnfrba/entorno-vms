@@ -25,7 +25,7 @@ apt-transport-https \
 gnome-keyring \
 firefox
 
-# Network manager config
+# Se levanta el administrador de red al iniciar
 mkdir -pv ~/.config/autostart
 
 cat > ~/.config/autostart/nm-applet.desktop << EOF
