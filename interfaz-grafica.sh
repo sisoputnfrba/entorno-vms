@@ -16,12 +16,26 @@ xfce4-whiskermenu-plugin \
 xarchiver \
 terminator \
 mousepad \
+network-manager \
+network-manager-gnome \
 lightdm \
 lightdm-gtk-greeter \
 gpg \
 apt-transport-https \
 gnome-keyring \
 firefox
+
+# Se levanta el administrador de red al iniciar
+mkdir -pv ~/.config/autostart
+
+cat > ~/.config/autostart/nm-applet.desktop << EOF
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=nm-applet
+Terminal=false
+Name=Network Manager Applet
+EOF
 
 # Se obtiene el nombre de la última release de Eclipse y la arquitectura
 ECLIPSE_VERSION=$(curl -fsS https://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/release.xml | grep -oPm1 "(?<=<present>)[^<]+")
