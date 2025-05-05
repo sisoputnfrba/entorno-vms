@@ -48,7 +48,7 @@ EOF
 mkdir -pv ~/.config/gtk-3.0
 
 cat > ~/.config/gtk-3.0/gtk.css <<EOF
-#pulseaudio-button > image { -gtk-icon-transform: scale(0.5); }
+#pulseaudio-button image { -gtk-icon-transform: scale(0.5); }
 #xfce4-notification-plugin > image { -gtk-icon-transform: scale(0.5); }
 EOF
 
