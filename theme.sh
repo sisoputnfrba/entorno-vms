@@ -163,7 +163,7 @@ cat > panel/config.txt << EOF
 /panels/panel-1/length-adjust true
 /panels/panel-1/mode uint32 0
 /panels/panel-1/nrows uint32 1
-/panels/panel-1/plugin-ids [<6>, <9>, <12>, <13>, <11>, <2>, <3>, <4>, <14>, <5>, <1>, <7>]
+/panels/panel-1/plugin-ids [<6>, <9>, <12>, <13>, <11>, <2>, <3>, <4>, <8>, <14>, <5>, <1>, <7>]
 /panels/panel-1/position 'p=8;x=512;y=752'
 /panels/panel-1/position-locked true
 /panels/panel-1/size uint32 41
@@ -198,11 +198,14 @@ cat > panel/config.txt << EOF
 /plugins/plugin-4/square-icons true
 /plugins/plugin-5 'clock'
 /plugins/plugin-5/digital-format '%I:%M %p'
+/plugins/plugin-5/digital-layout uint32 3
+/plugins/plugin-5/digital-time-format '%R'
 /plugins/plugin-5/mode uint32 2
 /plugins/plugin-5/show-frame true
 /plugins/plugin-5/tooltip-format '%A %d %B %Y'
 /plugins/plugin-6 'whiskermenu'
 /plugins/plugin-7 'showdesktop'
+/plugins/plugin-8 'power-manager-plugin'
 /plugins/plugin-9 'separator'
 /plugins/plugin-9/style uint32 2
 EOF
