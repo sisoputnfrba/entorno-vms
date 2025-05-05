@@ -12,6 +12,7 @@ xorg \
 xfce4 \
 xfce4-screenshooter \
 xfce4-panel-profiles \
+xfce4-power-manager \
 xfce4-whiskermenu-plugin \
 xarchiver \
 terminator \
