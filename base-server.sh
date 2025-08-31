@@ -14,6 +14,7 @@ libfl-dev \
 libfuse-dev \
 libncurses5-dev \
 libreadline-dev \
+libssl-dev \
 autotools-dev \
 build-essential \
 cmake \
