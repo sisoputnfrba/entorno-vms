@@ -1,0 +1,31 @@
+name: VM Install Script Check
+
+on:
+  push:
+    paths:
+      - 'base-server.sh'
+  pull_request:
+    paths:
+      - 'base-server.sh'
+  workflow_dispatch:
+
+jobs:
+  test-install:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./install.sh
+
+      - name: Run installation script
+        run: sudo ./install.sh
+
+      - name: Verify installed tools
+        run: |
+          git --version
+          gcc --version
+          java -version
+          ssh -V
