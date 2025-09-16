@@ -1,10 +1,6 @@
 name: VM Install Script Check
 
 on:
-  push:
-    paths:
-      - '.github/workflows/base-server.yml'
-      - 'base-server.sh'
   pull_request:
     paths:
       - '.github/workflows/base-server.yml'
