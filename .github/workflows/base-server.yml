@@ -23,7 +23,7 @@ jobs:
         run: chmod +x ./base-server.sh
 
       - name: Run installation script
-        run: ./base-server.sh
+        run: sudo ./base-server.sh
 
       - name: Verify installed tools
         run: |
