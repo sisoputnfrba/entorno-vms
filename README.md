@@ -1,6 +1,6 @@
 # SisOp VMs
 
-Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu. Se recomienda partir de una instalación limpia de [Ubuntu Server 22.04 LTS](https://ubuntu.com/download/server) o [su versión para computadoras con procesador ARM](https://ubuntu.com/download/server/arm).
+Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu. Se recomienda partir de una instalación limpia de [Ubuntu Server 22.04 LTS](https://releases.ubuntu.com/22.04/) o [su versión para computadoras con procesador ARM](https://cdimage.ubuntu.com/releases/22.04/release/).
 
 También incluye un tema para Xfce agregando los paquetes necesarios para poder servir como entorno de desarrollo del trabajo práctico.
 
