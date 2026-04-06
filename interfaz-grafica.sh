@@ -75,6 +75,4 @@ fi
 # Se instalan las extensiones recomendadas
 code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension ms-vscode.hexeditor
-code --install-extension matepek.vscode-catch2-test-adapter
-code --install-extension eamodio.gitlens
 code --install-extension nhoizey.gremlins
