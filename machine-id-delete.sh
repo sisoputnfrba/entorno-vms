@@ -8,7 +8,6 @@ if [ "$(id -u)" -ne 0 ]; then
   exit 1
 fi
 
-
 sudo truncate -s 0 /etc/machine-id
 sudo rm /var/lib/dbus/machine-id
 sudo poweroff
