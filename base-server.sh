@@ -12,7 +12,7 @@ libcunit1-dev \
 libevent-dev \
 libfl-dev \
 libfuse-dev \
-libncurses5-dev \
+libncurses-dev \
 libreadline-dev \
 libssl-dev \
 autotools-dev \
@@ -30,7 +30,7 @@ git-all \
 htop \
 ssh \
 net-tools \
-neofetch \
+fastfetch \
 tar \
 unzip \
 7zip \
