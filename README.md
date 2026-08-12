@@ -63,11 +63,6 @@ reboot
 ./clion.sh
 ```
 
-- Instalar la últiam versión estable de Go
-```bash
-./golang.sh
-```
-
 ## Contributors
 
 - Damian Facchini [@iago64](https://github.com/iago64)
