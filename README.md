@@ -58,10 +58,6 @@ reboot
   - Para VirtualBox: [instalar las Guest Additions](https://docs.utnso.com.ar/primeros-pasos/entorno-linux.html#instalar-las-guest-additions)
   - Para UTM: [instalar las Spice Guest Agent Tools](https://youtu.be/hnwK-nkXolc?t=527)
 
-- Instalar CLion IDE (solo si contamos con los [requisitos recomendados](https://www.jetbrains.com/help/clion/installation-guide.html))
-```bash
-./clion.sh
-```
 
 ## Contributors
 
