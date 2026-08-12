@@ -63,7 +63,4 @@ reboot
 
 - Damian Facchini [@iago64](https://github.com/iago64)
 - Agustín Ranieri [@RaniAgus](https://github.com/RaniAgus)
-
-## Mantenimiento de la Cátedra
-
-Si formas parte de la cátedra y necesitas generar los archivos `.ova` para distribuir a los alumnos al comienzo del cuatrimestre, puedes seguir la [Guía de Exportación de Máquinas Virtuales](GUIA_EXPORTACION.md) paso a paso.
+- Juani Mesaglio [@mesaglio](https://github.com/mesaglio)
