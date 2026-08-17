@@ -1,6 +1,6 @@
 # SisOp VMs
 
-Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu. Se recomienda partir de una instalación limpia de [Ubuntu Server 22.04 LTS](https://releases.ubuntu.com/22.04/) o [su versión para computadoras con procesador ARM](https://cdimage.ubuntu.com/releases/22.04/release/).
+Este repositorio contiene los archivos para generar el ambiente de la máquina virtual de Sistemas Operativos UTN FRBA en cualquier instalación de Ubuntu. Se recomienda partir de una instalación limpia de [Ubuntu Server 26.04 LTS](https://releases.ubuntu.com/26.04/) o [su versión para computadoras con procesador ARM](https://cdimage.ubuntu.com/releases/26.04/release/).
 
 También incluye un tema para Xfce agregando los paquetes necesarios para poder servir como entorno de desarrollo del trabajo práctico.
 
@@ -58,17 +58,9 @@ reboot
   - Para VirtualBox: [instalar las Guest Additions](https://docs.utnso.com.ar/primeros-pasos/entorno-linux.html#instalar-las-guest-additions)
   - Para UTM: [instalar las Spice Guest Agent Tools](https://youtu.be/hnwK-nkXolc?t=527)
 
-- Instalar CLion IDE (solo si contamos con los [requisitos recomendados](https://www.jetbrains.com/help/clion/installation-guide.html))
-```bash
-./clion.sh
-```
-
-- Instalar la últiam versión estable de Go
-```bash
-./golang.sh
-```
 
 ## Contributors
 
 - Damian Facchini [@iago64](https://github.com/iago64)
 - Agustín Ranieri [@RaniAgus](https://github.com/RaniAgus)
+- Juani Mesaglio [@mesaglio](https://github.com/mesaglio)

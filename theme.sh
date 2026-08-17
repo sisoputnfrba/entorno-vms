@@ -10,6 +10,7 @@ sudo apt-get install -y arc-theme
 # Instalar pack de iconos
 git clone https://github.com/vinceliuice/Tela-icon-theme
 cd Tela-icon-theme
+git checkout 4f560eccd0acc9c192f31077c2b3202422cb24fb
 ./install.sh
 cd ..
 rm -rf Tela-icon-theme
