@@ -10,21 +10,25 @@ sudo apt-get install -y \
 aptitude \
 xorg \
 xfce4 \
+xfce4-notifyd \
 xfce4-screenshooter \
 xfce4-panel-profiles \
 xfce4-power-manager \
+xfce4-power-manager-plugins \
 xfce4-whiskermenu-plugin \
 xarchiver \
 terminator \
 mousepad \
 network-manager \
-network-manager-gnome \
 lightdm \
 lightdm-gtk-greeter \
 gpg \
 apt-transport-https \
-gnome-keyring \
 firefox
+
+sudo apt-get install --no-install-recommends -y \
+network-manager-gnome \
+gnome-keyring
 
 # Se levanta el administrador de red al iniciar
 mkdir -pv ~/.config/autostart
